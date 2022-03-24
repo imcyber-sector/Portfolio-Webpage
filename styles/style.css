@@ -1,0 +1,239 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144; 
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1200px / 16px = 75em */
+/* @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  } */
+  
+  /* 980px / 16px = 61.25em */
+  /* @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  } */
+  
+  /* 460px / 16px = 28.75em */
+  /* @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+} */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
+
+#container {
+    min-width: 320px;
+}
+
+#navbar {
+    background-color: var(--main-red);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+ul.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--main-white);
+    padding: 1.1rem;
+    font-size: 1.3rem;
+    display: flex;
+}
+
+#welcome-section {
+    height: 100vh;
+    color: var(--main-white);
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section h1, #contact > h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#welcome-section em {
+    color: var(--main-red);
+    font-size: 1.75rem;
+}
+
+section#projects {
+    padding: 6rem 1rem;
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    text-align: center;
+}
+
+#projects > h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    margin: 0 auto 3.7rem auto;
+    max-width: 620px;
+}
+
+#project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width:663px){
+    #project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-tile img {
+    width: 100%;
+}
+
+a.project-tile {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+figcaption {
+    text-align: center;
+    background-color: var(--main-gray);
+    padding: 1.1rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+span.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.project-tile:hover .code{
+    color: orange;
+}
+
+a#show-all-link {
+    text-decoration: none;
+    color: var(--main-white);
+    padding: 0.6rem 1.1rem;
+    background-color: var(--main-gray);
+    font-size: 1.2rem;
+    border-radius: 2px;
+    transition: background-color 0.3s ease-out;
+}
+
+#show-all-link > i {
+    margin-left: 5px;
+    transition: margin-left 0.3s ease-out;
+}
+
+#show-all-link:hover {
+    background-color: var(--main-red);
+    transition: background-color 0.3s ease-out;
+}
+
+#show-all-link:hover > i {
+    transform: translateX(2px);
+    transition: transform 0.3s ease-in-out;
+}
+
+section#contact {
+    background-color: var(--main-gray);
+    text-align: center;
+    color: var(--main-white);
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    border-bottom: 5px solid var(--main-red);
+}
+
+#contact em {
+    font-size: 1.1rem;
+}
+
+#contact-info {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+#contact-info li {
+    margin-top: 1rem;
+}
+
+#contact-info a{
+    text-decoration: none;
+    color: var(--main-white);
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+    transition: transform 0.3s ease-in-out;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    padding: 1rem;
+}
+
+footer > p:first-child {
+   display: flex;
+   flex-direction: column; 
+}
+
+@media (max-width:488px){
+    ul.nav-list {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
